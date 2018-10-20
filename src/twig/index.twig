@@ -1,0 +1,22 @@
+{# index.twig #}
+{% extends "partials/layout.twig" %}
+
+{# Imports #}
+{% import "components/section.twig" as section %}
+{% import "components/links.twig" as links %}
+{% import "components/media.twig" as media %}
+ 
+{% block page %}
+    
+    {# Slide 1 #}
+
+    {% set slide1Content = 
+         media.img('class="logo--home"','"../img/logo.png"','logo') 
+    %}
+
+    {{ section.section(
+        'class="section section--home"',
+        slide1Content
+    ) }}
+
+{% endblock %}

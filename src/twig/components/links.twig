@@ -1,0 +1,5 @@
+{% macro link(attribut, url, alt, content) %}
+    
+    <a {{ attribut }} src={{ url }} alt={{ alt }}>{{ content|raw }}<a/>
+
+{% endmacro %}

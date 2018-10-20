@@ -1,0 +1,9 @@
+{% macro section(attribut, content) %}
+    
+    <section {{ attribut }}>
+        <div class="container">
+            {{ content|raw }}
+        </div>
+    </section>
+
+{% endmacro %}   
