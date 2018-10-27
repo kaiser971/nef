@@ -1,31 +1,80 @@
 
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <meta name="description" content="A demo of how to use gulp-twig"/>
-    <meta name="author" content="NEF"/>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
- 
-    <title>NEF</title>
-<link rel="stylesheet" type="text/css" href="../css/main.css">
- 
-</head>
-<body>
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+        <meta name="description" content="A demo of how to use gulp-twig"/>
+        <meta name="author" content="NEF"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
     
+        <title>NEF</title>
+        <link href="https://fonts.googleapis.com/css?family=Dosis:200,400,600" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="../css/main.css">
+    
+    </head>
+    <body>
+        
+
     
     
 
     
+    <ul class="navigation">
+        
+    <li >
+        
+    
+    <a class="link" href=#section-prez alt=nextsection>Présentation</a>
+
+
+    </li>
+
+    <li >
+        
+    
+    <a class="link" href=#section-metiers alt=nextsection>Nos métiers</a>
+
+
+    </li>
+
+    <li >
+        
+    
+    <a class="link" href=#section-galerie alt=nextsection>Galerie</a>
+
+
+    </li>
+
+    <li >
+        
+    
+    <a class="link" href=#section-contact alt=nextsection>Contactez-nous</a>
+
+
+    </li>
+
+    </ul>
+
+
 
     
+    <div id="fullpage">
     
-    <section class="section section--home">
+        
+        
+
+        
+    
+    <section class="section section--home" data-anchor="home">
         <div class="container">
             
     
     <img class="logo--home" src="../img/logo.png" alt=logo/>
+
+
+    
+    <a class="u-ta-center link link--scroll" href=#section-prez alt=nextsection>Scroll</a>
 
 
         </div>
@@ -33,6 +82,47 @@
 
 
 
+        
+        
 
-</body>
+        
+    
+    <section class="section section--prez" data-anchor="section-prez">
+        <div class="container">
+            
+    
+    <a class="u-ta-center link link--scroll" href=#section-metiers alt=nextsection>Scroll</a>
+
+
+        </div>
+    </section>
+
+
+
+        
+        
+
+        
+    
+    <section class="section section--metiers" data-anchor="section-metiers">
+        <div class="container">
+            
+    
+    <a class="u-ta-center link link--scroll" href=#home alt=nextsection>Scroll</a>
+
+
+        </div>
+    </section>
+
+
+
+    </div>
+
+
+
+        
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script type="text/javascript" src="https://rawgit.com/alvarotrigo/fullPage.js/dev/src/fullpage.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+    </body>
 </html>

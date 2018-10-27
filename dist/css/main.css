@@ -297,24 +297,69 @@ template {
 [hidden] {
   display: none; }
 
+body {
+  font-family: 'Dosis', sans-serif;
+  font-size: 16px; }
+
+.link {
+  color: white;
+  text-decoration: underline; }
+  .link:hover {
+    color: white; }
+
+.link--scroll {
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  right: 0;
+  text-transform: uppercase;
+  font-weight: 200;
+  border: 1px solid white;
+  border-radius: 15px;
+  padding: 10px 0px;
+  width: 5%;
+  margin: 0 auto; }
+
 .section {
-  height: 100vh; }
+  height: 100vh;
+  position: relative; }
 
 .container {
   width: 85%;
   margin: 0 auto; }
 
+.navigation {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: flex-end; }
+  .navigation li {
+    list-style-type: none;
+    padding-right: 10px;
+    font-weight: 600;
+    font-size: 16px;
+    text-transform: uppercase; }
+
+/* SECTION HOME */
 .section--home {
   background-image: url("../img/bg-home.jpg");
   background-size: cover; }
   .section--home .container {
-    display: flex;
-    flex-wrap: wrap; }
+    display: flex; }
 
 .logo--home {
   width: 400px;
   height: 100%;
   margin: 0 auto; }
+
+/* SECTION PRESENTATION */
+.section--prez {
+  background-image: url("../img/bg-section-2.jpg");
+  background-size: cover; }
+  .section--prez .container {
+    display: flex; }
 
 .u-c-white {
   color: white; }
@@ -333,3 +378,12 @@ template {
 
 .u-d-ib {
   display: inline-block; }
+
+.u-m-0a {
+  margin: 0 auto; }
+
+.u-w-100p {
+  width: 100%; }
+
+.u-ta-center {
+  text-align: center; }
