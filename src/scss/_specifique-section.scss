@@ -1,0 +1,25 @@
+/* SECTION HOME */
+.section--home {
+    background-image: url("../img/bg-home.jpg");
+    background-size: cover;
+
+    .container {
+        display: flex;
+    }
+}
+
+.logo--home {
+    width: 400px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+/* SECTION PRESENTATION */
+.section--prez {
+    background-image: url("../img/bg-section-2.jpg");
+    background-size: cover;
+
+    .container {
+        display: flex;
+    }
+}

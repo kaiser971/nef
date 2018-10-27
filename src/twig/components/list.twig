@@ -1,0 +1,11 @@
+{% macro ul(attribut, content) %}
+    <ul {{ attribut }}>
+        {{ content|raw }}
+    </ul>
+{% endmacro %} 
+
+{% macro li(attribut, content) %}
+    <li {{ attribut }}>
+        {{ content|raw }}
+    </li>
+{% endmacro %}

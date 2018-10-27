@@ -5,18 +5,58 @@
 {% import "components/section.twig" as section %}
 {% import "components/links.twig" as links %}
 {% import "components/media.twig" as media %}
+{% import "components/list.twig" as list %}
  
 {% block page %}
-    
-    {# Slide 1 #}
 
-    {% set slide1Content = 
-         media.img('class="logo--home"','"../img/logo.png"','logo') 
+    {# Navigation #}
+    {% set nav = 
+        list.ul(
+            'class="navigation"',
+            list.li('', links.link('class="link"', '#section-prez', "nextsection", 'Présentation')) ~ 
+            list.li('', links.link('class="link"', '#section-metiers', "nextsection", 'Nos métiers')) ~
+            list.li('', links.link('class="link"', '#section-galerie', "nextsection", 'Galerie')) ~
+            list.li('', links.link('class="link"', '#section-contact', "nextsection", 'Contactez-nous'))
+        )
     %}
 
-    {{ section.section(
-        'class="section section--home"',
-        slide1Content
-    ) }}
+    {{ nav }}
+
+
+    {# FULL page #}
+    <div id="fullpage">
+    
+        {# Slide 1 #}
+        {% set slide1Content = 
+            media.img('class="logo--home"','"../img/logo.png"','logo') ~
+            links.link('class="u-ta-center link link--scroll"', '#section-prez', "nextsection", 'Scroll')
+        %}
+
+        {{ section.section(
+            'class="section section--home" data-anchor="home"',
+            slide1Content
+        ) }}
+
+        {# Slide 2 #}
+        {% set slide2Content = 
+            links.link('class="u-ta-center link link--scroll"', '#section-metiers', "nextsection", 'Scroll')
+        %}
+
+        {{ section.section(
+            'class="section section--prez" data-anchor="section-prez"',
+            slide2Content
+        ) }}
+
+        {# Slide 3 #}
+        {% set slide3Content = 
+            links.link('class="u-ta-center link link--scroll"', '#home', "nextsection", 'Scroll')
+        %}
+
+        {{ section.section(
+            'class="section section--metiers" data-anchor="section-metiers"',
+            slide3Content
+        ) }}
+
+    </div>
 
 {% endblock %}
