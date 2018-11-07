@@ -1,3 +1,8 @@
-{% macro nav(attribut, url, alt) %}
+{% macro nav(logo, content) %}
+
+    <div class="navigationContainer">
+        {{ logo|raw }}
+        {{ content|raw }}
+    </div>
 
 {% endmacro %}  

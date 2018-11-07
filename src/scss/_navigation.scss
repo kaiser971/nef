@@ -2,7 +2,7 @@
     z-index: 1;
     position: fixed;
     top: 0;
-    left: 0;
+    right: 7.5%;
     display: flex;
     justify-content: flex-end;
 
@@ -13,4 +13,14 @@
         font-size: 16px;
         text-transform: uppercase;
     }
+}
+
+.logo--nav {
+    width: 100px;
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 7.5%;
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
