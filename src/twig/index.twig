@@ -6,11 +6,21 @@
 {% import "components/links.twig" as links %}
 {% import "components/media.twig" as media %}
 {% import "components/list.twig" as list %}
+{% import "partials/nav.twig" as nav %}
  
 {% block page %}
 
     {# Navigation #}
-    {% set nav = 
+    {% set logoNav =
+    links.link(
+        '',
+        '#home',
+        'home',
+        media.img('class="logo--nav"','"../img/logo.png"','logo')
+    )
+    %}
+
+    {% set navigation =
         list.ul(
             'class="navigation"',
             list.li('', links.link('class="link"', '#section-prez', "nextsection", 'Présentation')) ~ 
@@ -20,7 +30,7 @@
         )
     %}
 
-    {{ nav }}
+    {{ nav.nav(logoNav,navigation) }}
 
 
     {# FULL page #}
