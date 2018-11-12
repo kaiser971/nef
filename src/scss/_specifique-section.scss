@@ -5,21 +5,26 @@
 
     .container {
         display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
     }
 }
 
 .logo--home {
     width: 400px;
-    height: 100%;
     margin: 0 auto;
 }
 
 /* SECTION PRESENTATION */
 .section--prez {
-    background-image: url("../img/bg-section-2.jpg");
-    background-size: cover;
 
     .container {
         display: flex;
     }
+
+  .section-left {
+    background-image: url("../img/bg-section-2.jpg");
+    background-size: cover;
+  }
 }
