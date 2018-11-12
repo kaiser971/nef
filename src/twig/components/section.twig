@@ -6,4 +6,19 @@
         </div>
     </section>
 
-{% endmacro %}   
+{% endmacro %}
+
+{% macro sectionSplit(attribut, contentLeft, contentRight) %}
+
+    <section {{ attribut }}>
+        <div class="container-split">
+            <div class="section-left">
+                {{ contentLeft|raw }}
+            </div>
+            <div class="section-right">
+                {{ contentRight|raw }}
+            </div>
+        </div>
+    </section>
+
+{% endmacro %}
