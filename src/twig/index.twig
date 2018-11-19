@@ -6,6 +6,8 @@
 {% import "components/links.twig" as links %}
 {% import "components/media.twig" as media %}
 {% import "components/list.twig" as list %}
+{% import "components/paragraph.twig" as paragraph %}
+{% import "components/title.twig" as title %}
 {% import "partials/nav.twig" as nav %}
  
 {% block page %}
@@ -48,14 +50,16 @@
         ) }}
 
         {# Slide 2 #}
-        {% set slide2Content = 
-            links.link('class="u-ta-center link link--scroll"', '#section-metiers', "nextsection", 'Scroll')
+        {% set slide2right =
+            paragraph.p('class="title title--section"',"Présentation") ~
+            title.titleh2('class="title title--2"',"Lorem ipsum dolor sit amen") ~
+            paragraph.p('class="medium"',"Lorem ipsum dolor sit amen para las conseguire")
         %}
 
         {{ section.sectionSplit(
             'class="section section--prez" data-anchor="section-prez"',
-            slide2Content,
-            slide2Content
+            "",
+            slide2right
         ) }}
 
         {# Slide 3 #}

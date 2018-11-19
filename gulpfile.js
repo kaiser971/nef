@@ -27,7 +27,7 @@ gulp.task('html', function () {
     return gulp.src('src/twig/index.twig')
         .pipe(twig({
             data: {
-                title: 'NEF',
+                titlePage: 'NEF',
             }
         }))
         .pipe(gulp.dest('dist/'));
