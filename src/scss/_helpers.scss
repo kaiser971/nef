@@ -13,6 +13,19 @@
 
 .u-d-ib { display: inline-block };
 
+// Flex option
+.u-jc-center {
+    justify-content: center;
+}
+
+.u-ai-center {
+    align-items: center;
+}
+
+.u-fd-column {
+    flex-direction: column;
+}
+
 // Margin
 .u-m-0a {
     margin: 0 auto;
@@ -42,6 +55,14 @@
 // Width
 .u-w-100p {
     width: 100%;
+}
+.u-w-60p {
+    width: 60%;
+}
+
+// Height
+.u-h-100p {
+    height: 100%;
 }
 
 // Text
