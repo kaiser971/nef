@@ -408,6 +408,37 @@ p {
   margin-top: 1em;
   margin-bottom: 1em; }
 
+.fp-viewing-section-prez .navigationContainer, .fp-viewing-section-metiers .navigationContainer {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 50px;
+  width: 100%;
+  z-index: 2;
+  animation: navSection 1.5s normal ease-in-out;
+  animation-iteration-count: 1; }
+
+.fp-viewing-section-prez .logo--nav, .fp-viewing-section-metiers .logo--nav {
+  width: 80px;
+  margin-top: 5px;
+  animation: navLogo 0.5s normal ease-in-out;
+  animation-iteration-count: 1; }
+
+@keyframes navSection {
+  0% {
+    background-color: rgba(0, 0, 0, 0); }
+  100% {
+    background-color: rgba(0, 0, 0, 0.6); } }
+
+@keyframes navLogo {
+  0% {
+    width: 100px;
+    margin-top: 1em; }
+  100% {
+    width: 80px;
+    margin-top: 5px; } }
+
 /* SECTION HOME */
 .section--home {
   background-image: url("../img/bg-home.jpg");
