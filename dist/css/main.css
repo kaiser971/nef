@@ -306,19 +306,19 @@ body {
   padding: 0;
   color: #232323; }
   .title--1 {
-    font-size: 32px;
+    font-size: 42px;
     font-weight: 700;
     margin-top: 20px;
     margin-bottom: 35px;
     text-transform: uppercase; }
   .title--2 {
-    font-size: 25px;
+    font-size: 35px;
     font-weight: 700;
     margin-top: 5px;
     margin-bottom: 30px;
     text-transform: uppercase; }
   .title--3 {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 700;
     margin-bottom: 20px; }
   .title--4 {
@@ -362,6 +362,13 @@ p {
   padding: 10px 0px;
   width: 5%;
   margin: 0 auto; }
+
+.block-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%; }
 
 .section {
   height: 100vh;
@@ -408,6 +415,37 @@ p {
   margin-top: 1em;
   margin-bottom: 1em; }
 
+.fp-viewing-section-prez .navigationContainer, .fp-viewing-section-metiers .navigationContainer {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 50px;
+  width: 100%;
+  z-index: 2;
+  animation: navSection 1.5s normal ease-in-out;
+  animation-iteration-count: 1; }
+
+.fp-viewing-section-prez .logo--nav, .fp-viewing-section-metiers .logo--nav {
+  width: 80px;
+  margin-top: 5px;
+  animation: navLogo 0.5s normal ease-in-out;
+  animation-iteration-count: 1; }
+
+@keyframes navSection {
+  0% {
+    background-color: rgba(0, 0, 0, 0); }
+  100% {
+    background-color: rgba(0, 0, 0, 0.6); } }
+
+@keyframes navLogo {
+  0% {
+    width: 100px;
+    margin-top: 1em; }
+  100% {
+    width: 80px;
+    margin-top: 5px; } }
+
 /* SECTION HOME */
 .section--home {
   background-image: url("../img/bg-home.jpg");
@@ -448,6 +486,15 @@ p {
 .u-d-ib {
   display: inline-block; }
 
+.u-jc-center {
+  justify-content: center; }
+
+.u-ai-center {
+  align-items: center; }
+
+.u-fd-column {
+  flex-direction: column; }
+
 .u-m-0a {
   margin: 0 auto; }
 
@@ -468,6 +515,12 @@ p {
 
 .u-w-100p {
   width: 100%; }
+
+.u-w-60p {
+  width: 60%; }
+
+.u-h-100p {
+  height: 100%; }
 
 .u-ta-center {
   text-align: center; }

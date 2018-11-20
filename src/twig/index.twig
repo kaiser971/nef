@@ -8,6 +8,7 @@
 {% import "components/list.twig" as list %}
 {% import "components/paragraph.twig" as paragraph %}
 {% import "components/title.twig" as title %}
+{% import "components/block.twig" as block %}
 {% import "partials/nav.twig" as nav %}
  
 {% block page %}
@@ -51,9 +52,12 @@
 
         {# Slide 2 #}
         {% set slide2right =
+        block.blockDiv(
+            'class="block-center u-w-60p u-m-0a"',
             paragraph.p('class="title title--section"',"Présentation") ~
             title.titleh2('class="title title--2"',"Lorem ipsum dolor sit amen") ~
-            paragraph.p('class="medium"',"Lorem ipsum dolor sit amen para las conseguire")
+            paragraph.p('class="medium u-ta-center"',"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc convallis, elit id vestibulum fermentum, arcu quam ultricies est, at condimentum ipsum magna sit amet ante. Nam eleifend sollicitudin ex quis consectetur. Quisque mollis, purus sit amet mollis tempor, quam ligula imperdiet purus, eu feugiat lectus mi vitae odio. Duis arcu sem, semper id aliquet sed, efficitur nec elit. Quisque nec neque erat. Cras id augue elit. Aliquam convallis, dui dignissim consectetur tincidunt, lectus nisl dictum sem, ultricies lacinia ex mi at elit. Proin vitae nisi congue metus rhoncus porttitor et sit amet felis. Vestibulum sit amet lacinia libero, id viverra felis.")
+        )
         %}
 
         {{ section.sectionSplit(
