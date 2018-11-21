@@ -76,6 +76,21 @@
             slide3Content
         ) }}
 
+        {# Slide 4 #}
+        {% set slide4Content =
+            block.blockDiv(
+                'class="gallery"',
+                block.blockDiv('class="gallery-link"', media.img('class="gallery-image"','https://unsplash.it/1400/1000?image=1081',"unsplash")) ~
+                block.blockDiv('class="gallery-link"', media.img('class="gallery-image"','https://unsplash.it/1600/1200?image=1014',"unsplash")) ~
+                block.blockDiv('class="gallery-link"', media.img('class="gallery-image"','https://unsplash.it/1200/1600?image=267',"unsplash")) ~
+                block.blockDiv('class="gallery-link"', media.img('class="gallery-image"','https://unsplash.it/1000/1200?image=266',"unsplash"))
+            )
+        %}
+        {{ section.section(
+        'class="section section--galerie" data-anchor="section-galerie"',
+        slide4Content
+        ) }}
+
     </div>
 
 {% endblock %}

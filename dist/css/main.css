@@ -415,7 +415,7 @@ p {
   margin-top: 1em;
   margin-bottom: 1em; }
 
-.fp-viewing-section-prez .navigationContainer, .fp-viewing-section-metiers .navigationContainer {
+.fp-viewing-section-prez .navigationContainer, .fp-viewing-section-metiers .navigationContainer, .fp-viewing-section-galerie .navigationContainer {
   position: absolute;
   left: 0;
   top: 0;
@@ -426,7 +426,7 @@ p {
   animation: navSection 1.5s normal ease-in-out;
   animation-iteration-count: 1; }
 
-.fp-viewing-section-prez .logo--nav, .fp-viewing-section-metiers .logo--nav {
+.fp-viewing-section-prez .logo--nav, .fp-viewing-section-metiers .logo--nav, .fp-viewing-section-galerie .logo--nav {
   width: 80px;
   margin-top: 5px;
   animation: navLogo 0.5s normal ease-in-out;
@@ -467,6 +467,10 @@ p {
 .section--prez .section-left {
   background-image: url("../img/bg-section-2.jpg");
   background-size: cover; }
+
+.gallery img {
+  width: 100%;
+  height: auto; }
 
 .u-c-white {
   color: white; }
