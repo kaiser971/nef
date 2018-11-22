@@ -39,7 +39,7 @@
     {# FULL page #}
     <div id="fullpage">
     
-        {# Slide 1 #}
+        {# Slide 1 : Home #}
         {% set slide1Content = 
             media.img('class="logo--home"','"../img/logo.png"','logo') ~
             links.link('class="u-ta-center link link--scroll"', '#section-prez', "nextsection", 'Scroll')
@@ -50,7 +50,7 @@
             slide1Content
         ) }}
 
-        {# Slide 2 #}
+        {# Slide 2 : Présentation #}
         {% set slide2right =
         block.blockDiv(
             'class="block-center u-w-60p u-m-0a"',
@@ -66,7 +66,7 @@
             slide2right
         ) }}
 
-        {# Slide 3 #}
+        {# Slide 3 : Métier #}
         {% set slide3Content = 
             links.link('class="u-ta-center link link--scroll"', '#home', "nextsection", 'Scroll')
         %}
@@ -76,7 +76,7 @@
             slide3Content
         ) }}
 
-        {# Slide 4 #}
+        {# Slide 4 : Gallery #}
         {% set slide4Content =
             block.blockDiv(
                 'class="gallery"',
@@ -89,6 +89,16 @@
         {{ section.section(
         'class="section section--galerie u-pt-60" data-anchor="section-galerie"',
         slide4Content
+        ) }}
+
+        {# Slide 5 : Contact #}
+        {% set slide5Content =
+        links.link('class="u-ta-center link link--scroll"', '#home', "nextsection", 'Scroll')
+        %}
+
+        {{ section.section(
+        'class="section section--metiers" data-anchor="section-metiers"',
+        slide5Content
         ) }}
 
     </div>
