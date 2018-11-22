@@ -1,0 +1,47 @@
+{# FORM #}
+{% macro form(attribut, content) %}
+
+    <form {{ attribut }}>
+        {{ content|raw }}
+    </form>
+
+{% endmacro %}
+
+{# INPUT #}
+{% macro input(type,class,placeholder,validationType,attributes) %}
+
+    {% if type == 'text' %}
+        <input type="text" class="default {{ class }}" placeholder="{{ placeholder }}" data-validation='{{ validationType|raw }}' {{ attributes }} />
+    {% endif %}
+
+    {% if type == 'email' %}
+        <input type="email" class="default {{ class }}" placeholder="{{ placeholder }}" data-validation='{{ validationType|raw }}' {{ attributes }} />
+    {% endif %}
+
+    {% if type == 'checkbox' %}
+        <input type="checkbox" class="default {{ class }}" placeholder="{{ placeholder }}" data-validation='{{ validationType|raw }}' {{ attributes }} />
+    {% endif %}
+
+    {% if type == 'radio' %}
+        <input type="radio" class="default {{ class }}" placeholder="{{ placeholder }}" data-validation='{{ validationType|raw }}' {{ attributes }} />
+    {% endif %}
+
+{% endmacro %}
+
+{# SELECT #}
+{% macro select(class,attributes,select) %}
+    <select class="default {{ class }}" {{ attributes }}>
+        {{ select|raw }}
+    </select>
+{% endmacro %}
+
+{% macro option(value,attributes,option) %}
+    <option value="{{ value }}" {{ attributes }}>{{ option|raw }}</option>
+{% endmacro %}
+
+{# TEXTAREA #}
+{% macro textarea(attributes,content) %}
+    <textarea {{ attributes }}>
+        {{ content|raw }}
+    </textarea>
+{% endmacro %}
