@@ -8,6 +8,10 @@
 
 .u-bg-black { background-color: black }
 
+.u-bg-gradient {
+    background-image: linear-gradient(to top, #00283f, #034764, #046a8b, #018eb1, #00b5d6);
+}
+
 // Display
 .u-d-flex { display: flex };
 

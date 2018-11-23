@@ -8,10 +8,14 @@
 
     li {
         list-style-type: none;
-        padding-right: 10px;
+        padding-right: 20px;
         font-weight: 600;
         font-size: 16px;
         text-transform: uppercase;
+
+        a:hover {
+            animation: navHover 0.5s normal ease-in-out;
+        }
     }
 }
 
@@ -25,7 +29,7 @@
     margin-bottom: 1em;
 }
 
-.fp-viewing-section-prez, .fp-viewing-section-metiers, .fp-viewing-section-galerie {
+.fp-viewing-section-prez, .fp-viewing-section-metiers, .fp-viewing-section-galerie, .fp-viewing-section-contact {
 
     .navigationContainer {
         position: absolute;
@@ -47,6 +51,11 @@
     }
 }
 
+.fp-viewing-section-prez .link-prez, .fp-viewing-section-metiers .link-metier, .fp-viewing-section-galerie .link-galerie, .fp-viewing-section-contact .link-contact {
+    color: #00b5d6;
+    text-decoration: underline;
+}
+
 // Animations Nav
 
 @keyframes navSection {
@@ -57,4 +66,9 @@
 @keyframes navLogo {
     0%  { width: 100px; margin-top: 1em; }
     100%  { width: 80px; margin-top: 5px; }
+}
+
+@keyframes navHover {
+    0%  { color: #ffffff; }
+    100%  { color: #00b5d6;}
 }

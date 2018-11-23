@@ -26,10 +26,10 @@
     {% set navigation =
         list.ul(
             'class="navigation"',
-            list.li('', links.link('class="link"', '#section-prez', "nextsection", 'Présentation')) ~ 
-            list.li('', links.link('class="link"', '#section-metiers', "nextsection", 'Nos métiers')) ~
-            list.li('', links.link('class="link"', '#section-galerie', "nextsection", 'Galerie')) ~
-            list.li('', links.link('class="link"', '#section-contact', "nextsection", 'Contactez-nous'))
+            list.li('', links.link('class="link link-prez"', '#section-prez', "nextsection", 'Présentation')) ~
+            list.li('', links.link('class="link link-metier"', '#section-metiers', "nextsection", 'Nos métiers')) ~
+            list.li('', links.link('class="link link-galerie"', '#section-galerie', "nextsection", 'Galerie')) ~
+            list.li('', links.link('class="link link-contact"', '#section-contact', "nextsection", 'Contactez-nous'))
         )
     %}
 
@@ -54,8 +54,7 @@
         {% set slide2right =
         block.blockDiv(
             'class="block-center u-w-60p u-m-0a"',
-            paragraph.p('class="title title--section"',"Présentation") ~
-            title.titleh2('class="title title--2"',"Lorem ipsum dolor sit amen") ~
+            title.titleh2('class="title title--2 title--line"',"Lorem ipsum dolor sit amen") ~
             paragraph.p('class="medium u-ta-center"',"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc convallis, elit id vestibulum fermentum, arcu quam ultricies est, at condimentum ipsum magna sit amet ante. Nam eleifend sollicitudin ex quis consectetur. Quisque mollis, purus sit amet mollis tempor, quam ligula imperdiet purus, eu feugiat lectus mi vitae odio. Duis arcu sem, semper id aliquet sed, efficitur nec elit. Quisque nec neque erat. Cras id augue elit. Aliquam convallis, dui dignissim consectetur tincidunt, lectus nisl dictum sem, ultricies lacinia ex mi at elit. Proin vitae nisi congue metus rhoncus porttitor et sit amet felis. Vestibulum sit amet lacinia libero, id viverra felis.")
         )
         %}
@@ -72,7 +71,7 @@
         %}
 
         {{ section.section(
-            'class="section section--metiers" data-anchor="section-metiers"',
+            'class="section section--metiers u-bg-gradient" data-anchor="section-metiers"',
             slide3Content
         ) }}
 
@@ -97,7 +96,7 @@
         %}
 
         {{ section.section(
-        'class="section section--metiers" data-anchor="section-metiers"',
+        'class="section section--contact u-bg-gradient" data-anchor="section-contact"',
         slide5Content
         ) }}
 
