@@ -1,9 +1,12 @@
 .gallery {
   position: relative;
+  display: flex;
+  align-items: center;
+  height: 100vh;
 
   img {
     width: auto;
-    height: 90vh;
+    height: 60vh;
     margin: 0 auto;
   }
 
@@ -28,6 +31,7 @@
 
   &:hover polyline,&:focus polyline {
     stroke-width: 3;
+    stroke: #00446b;
   }
 }
 
