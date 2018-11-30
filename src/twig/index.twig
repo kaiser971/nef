@@ -9,8 +9,10 @@
 {% import "components/paragraph.twig" as paragraph %}
 {% import "components/title.twig" as title %}
 {% import "components/block.twig" as block %}
+{% import "components/form.twig" as form %}
 {% import "partials/nav.twig" as nav %}
- 
+{% import "blocks/block--home.twig" as blockHome %}
+
 {% block page %}
 
     {# Navigation #}
@@ -34,7 +36,7 @@
     %}
 
     {{ nav.nav(logoNav,navigation) }}
-
+    {{ block.blockDiv('class="bg-fixe"','') }}
 
     {# FULL page #}
     <div id="fullpage">
@@ -42,7 +44,7 @@
         {# Slide 1 : Home #}
         {% set slide1Content = 
             media.img('class="logo--home"','"../img/logo.png"','logo') ~
-            links.link('class="u-ta-center link link--scroll"', '#section-prez', "nextsection", 'Scroll')
+            links.LinkScroll('class="link link--scroll"', '#section-prez', 'nextsection')
         %}
 
         {{ section.section(
@@ -79,7 +81,7 @@
         {% set slide4Content =
             block.blockDiv(
                 'class="gallery"',
-                block.blockDiv('class="gallery-link"', media.img('class="gallery-image"','https://unsplash.it/1400/1000?image=1081',"unsplash")) ~
+                block.blockDiv('class="gallery-link"', media.img('class="gallery-image"','http://satyr.io/600x900',"unsplash")) ~
                 block.blockDiv('class="gallery-link"', media.img('class="gallery-image"','https://unsplash.it/1600/1200?image=1014',"unsplash")) ~
                 block.blockDiv('class="gallery-link"', media.img('class="gallery-image"','https://unsplash.it/1200/1600?image=267',"unsplash")) ~
                 block.blockDiv('class="gallery-link"', media.img('class="gallery-image"','https://unsplash.it/1000/1200?image=266',"unsplash"))
@@ -91,13 +93,25 @@
         ) }}
 
         {# Slide 5 : Contact #}
-        {% set slide5Content =
-        links.link('class="u-ta-center link link--scroll"', '#home', "nextsection", 'Scroll')
+        {% set slide5left =
+            form.form(
+                'class="u-pt-60"',
+                form.label('','input 1') ~
+                form.input('text','','lorem ipsum','','')
+            )
+        %}
+        {% set slide5right =
+            form.form(
+                'class="u-pt-60"',
+                form.label('','input 1') ~
+                form.input('text','','lorem ipsum','','')
+            )
         %}
 
-        {{ section.section(
-        'class="section section--contact u-bg-gradient" data-anchor="section-contact"',
-        slide5Content
+        {{ section.sectionSplit(
+        'class="section section--contact " data-anchor="section-contact"',
+        slide5left,
+        slide5right
         ) }}
 
     </div>
