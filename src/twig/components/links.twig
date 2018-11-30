@@ -1,5 +1,17 @@
+{# default link #}
 {% macro link(attribut, url, alt, content) %}
     
     <a {{ attribut }} href={{ url }} alt={{ alt|raw }}>{{ content|raw }}</a>
+
+{% endmacro %}
+
+{# Scroll down link #}
+{% macro LinkScroll(attribut, href, alt) %}
+
+    <a {{ attribut }} href={{ href }} alt={{ alt|raw }}>
+        <div class="mouse">
+            <div class="wheel"></div>
+        </div>
+    </a>
 
 {% endmacro %}

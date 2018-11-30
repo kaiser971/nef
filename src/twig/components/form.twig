@@ -7,6 +7,15 @@
 
 {% endmacro %}
 
+{# LABEL #}
+{% macro label(attribut, content) %}
+
+    <label {{ attribut }}>
+        {{ content|raw }}
+    </label>
+
+{% endmacro %}
+
 {# INPUT #}
 {% macro input(type,class,placeholder,validationType,attributes) %}
 

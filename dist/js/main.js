@@ -1,5 +1,5 @@
 new fullpage('#fullpage', {
-    sectionsColor: ['#EFEFEF', '#EFEFEF', '#EFEFEF', '#EFEFEF', '#EFEFEF'],
+    sectionsColor: ['transparent', '#EFEFEF', '#EFEFEF', '#EFEFEF', 'transparent'],
   });
 
 $('.gallery').slick({
