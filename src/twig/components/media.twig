@@ -2,4 +2,12 @@
 
     <img {{ attribut }} src={{ url }} alt={{ alt }}/>
 
-{% endmacro %}   
+{% endmacro %}
+
+{% macro video(attribut, src, sourceAttr) %}
+
+    <video {{ attribut }}>
+        <source src={{ src }} {{ sourceAttr }}>
+    </video>
+
+{% endmacro %}
