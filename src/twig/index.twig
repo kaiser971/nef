@@ -36,7 +36,11 @@
     %}
 
     {{ nav.nav(logoNav,navigation) }}
-    {{ block.blockDiv('class="bg-fixe"','') }}
+    {{ block.blockDiv(
+            'class="bg-fixe"',
+            media.video('autoplay muted loop class="bgVideo"','"../video/background_video.mp4"','type="video/mp4"')
+        )
+    }}
 
     {# FULL page #}
     <div id="fullpage">
