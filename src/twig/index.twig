@@ -97,25 +97,34 @@
         ) }}
 
         {# Slide 5 : Contact #}
-        {% set slide5left =
+        {% set slide5 =
             form.form(
-                'class="u-pt-60"',
-                form.label('','input 1') ~
-                form.input('text','','lorem ipsum','','')
-            )
-        %}
-        {% set slide5right =
-            form.form(
-                'class="u-pt-60"',
-                form.label('','input 1') ~
-                form.input('text','','lorem ipsum','','')
+                'class="u-pt-60 form"',
+                block.blockDiv(
+                    'class="u-p-15 u-w-100p"',
+                    block.blockDiv(
+                        'class="group-form"',
+                        form.label('','input 1') ~
+                        form.input('text','','','','') ~
+                        paragraph.p('class="error u-mt-10"',"lorem ipsum error")
+                    )
+                ) ~
+                block.blockDiv(
+                    'class="u-p-15 u-w-100p"',
+                    block.blockDiv(
+                        'class="group-form"',
+                        form.label('','input 1') ~
+                        form.input('text','','','','') ~
+                        paragraph.p('class="error u-mt-10"',"lorem ipsum error")
+                    )
+                )
+
             )
         %}
 
-        {{ section.sectionSplit(
-        'class="section section--contact " data-anchor="section-contact"',
-        slide5left,
-        slide5right
+        {{ section.section(
+        'class="section section--contact" data-anchor="section-contact"',
+        slide5
         ) }}
 
     </div>

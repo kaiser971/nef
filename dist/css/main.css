@@ -355,6 +355,10 @@ p {
 .small {
   font-size: 12px; }
 
+.error {
+  font-size: 12px;
+  color: #00b5d6; }
+
 .link {
   color: white;
   text-decoration: none; }
@@ -645,6 +649,25 @@ p {
 .slick-next {
   right: 0; }
 
+.form {
+  display: flex;
+  justify-content: space-around;
+  width: 70%;
+  margin: 0 auto; }
+
+.form input {
+  background: transparent;
+  border: none;
+  padding: 10px;
+  border-bottom: 1px solid #797979;
+  width: 100%;
+  outline: none; }
+
+.form input:focus {
+  border-bottom: 4px solid #00b5d6;
+  padding-bottom: 7px;
+  transition: all 0.3s; }
+
 .u-c-white {
   color: white; }
 
@@ -677,6 +700,12 @@ p {
 
 .u-m-0a {
   margin: 0 auto; }
+
+.u-mt-10 {
+  margin-top: 10px; }
+
+.u-mt-15 {
+  margin-top: 15px; }
 
 .u-p-15 {
   padding: 15px; }
