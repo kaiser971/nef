@@ -5,17 +5,51 @@
   margin: 0 auto;
 }
 
-.form input {
+.group-form {
+  position: relative;
+  margin-top: 15px;
+}
+
+.group-form--input input{
+  margin-top: 15px;
+}
+
+.group-form--input input {
   background: transparent;
   border: none;
   padding: 10px;
-  border-bottom: 1px solid #797979;
+  border-bottom: 1px solid #dadada;
   width: 100%;
   outline: none;
 }
 
-.form input:focus {
+.group-form--input label {
+  position: absolute;
+}
+
+.group-form--input input:empty + label {
+  top: 15px;
+  transition: all 0.3s;
+}
+
+.group-form--input input:focus {
   border-bottom: 4px solid #00b5d6;
   padding-bottom: 7px;
   transition: all 0.3s;
+}
+
+.group-form--input input:focus + label, .group-form--input input.filled + label {
+  top: 0;
+  font-size: 14px;
+}
+
+.group-form--input input:focus + label {
+  transition: all 0.3s;
+}
+
+.group-form textarea {
+  width: 100%;
+  background-color: transparent;
+  border: 1px solid #dadada;
+  margin-top: 10px;
 }
