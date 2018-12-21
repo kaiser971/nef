@@ -44,19 +44,24 @@
 
     {# FULL page #}
     <div id="fullpage">
-    
-        {# Slide 1 : Home #}
+
+        {# --------------------------------Slide 1 : Home-------------------------------- #}
+
+        {# ----SET VARIABLE---- #}
         {% set slide1Content = 
             media.img('class="logo--home"','"../img/logo.png"','logo') ~
             links.LinkScroll('class="link link--scroll"', '#section-prez', 'nextsection')
         %}
 
+        {# ----CALL VARIABLE---- #}
         {{ section.section(
             'class="section section--home" data-anchor="home"',
             slide1Content
         ) }}
 
-        {# Slide 2 : Présentation #}
+        {# --------------------------------Slide 2 : Présentation-------------------------------- #}
+
+        {# ----SET VARIABLE---- #}
         {% set slide2right =
         block.blockDiv(
             'class="block-center u-w-60p u-m-0a"',
@@ -65,23 +70,29 @@
         )
         %}
 
+        {# ----CALL VARIABLE---- #}
         {{ section.sectionSplit(
             'class="section section--prez" data-anchor="section-prez"',
             "",
             slide2right
         ) }}
 
-        {# Slide 3 : Métier #}
+        {# --------------------------------Slide 3 : Métier-------------------------------- #}
+
+        {# ----SET VARIABLE---- #}
         {% set slide3Content = 
             links.link('class="u-ta-center link link--scroll"', '#home', "nextsection", 'Scroll')
         %}
 
+        {# ----CALL VARIABLE---- #}
         {{ section.section(
             'class="section section--metiers u-bg-gradient" data-anchor="section-metiers"',
             slide3Content
         ) }}
 
-        {# Slide 4 : Gallery #}
+        {# --------------------------------Slide 4 : Gallery-------------------------------- #}
+
+        {# ----SET VARIABLE---- #}
         {% set slide4Content =
             block.blockDiv(
                 'class="gallery"',
@@ -91,37 +102,54 @@
                 block.blockDiv('class="gallery-link"', media.img('class="gallery-image"','https://unsplash.it/1000/1200?image=266',"unsplash"))
             )
         %}
+
+        {# ----CALL VARIABLE---- #}
         {{ section.section(
         'class="section section--galerie u-pt-60" data-anchor="section-galerie"',
         slide4Content
         ) }}
 
-        {# Slide 5 : Contact #}
+        {# --------------------------------Slide 5 : Contact-------------------------------- #}
+
+        {# ----SET VARIABLE---- #}
         {% set slide5 =
             form.form(
                 'class="u-pt-60 form"',
                 block.blockDiv(
                     'class="u-p-15 u-w-100p"',
                     block.blockDiv(
-                        'class="group-form"',
-                        form.label('','input 1') ~
+                        'class="group-form group-form--input"',
                         form.input('text','','','','') ~
-                        paragraph.p('class="error u-mt-10"',"lorem ipsum error")
+                        form.label('','input 1') ~
+                        paragraph.p('class="error-text u-mt-10"',"lorem ipsum error")
+                    ) ~
+                    block.blockDiv(
+                        'class="group-form group-form--input"',
+                        form.input('text','','','','') ~
+                        form.label('','input 2') ~
+                        paragraph.p('class="error-text u-mt-10"',"lorem ipsum error 2")
+                    ) ~
+                    block.blockDiv(
+                        'class="group-form group-form--input"',
+                        form.input('text','','','','') ~
+                        form.label('','input 3') ~
+                        paragraph.p('class="error-text u-mt-10"',"lorem ipsum error 3")
                     )
                 ) ~
                 block.blockDiv(
                     'class="u-p-15 u-w-100p"',
                     block.blockDiv(
                         'class="group-form"',
-                        form.label('','input 1') ~
-                        form.input('text','','','','') ~
-                        paragraph.p('class="error u-mt-10"',"lorem ipsum error")
+                        form.label('','textarea 1') ~
+                        form.textarea('','') ~
+                        paragraph.p('class="error-text u-mt-10"',"lorem ipsum error 3")
                     )
                 )
 
             )
         %}
 
+        {# ----CALL VARIABLE---- #}
         {{ section.section(
         'class="section section--contact" data-anchor="section-contact"',
         slide5
