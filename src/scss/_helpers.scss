@@ -38,8 +38,13 @@
 .u-mt-10 {
     margin-top: 10px;
 }
+
 .u-mt-15 {
     margin-top: 15px;
+}
+
+.u-mt-30 {
+    margin-top: 30px;
 }
 
 // padding
@@ -63,16 +68,29 @@
     padding-right: 15px;
 }
 
-.u-pt-60 {
-    padding-top: 60px;
+.u-pl-30 {
+    padding-left: 30px;
+}
+
+.u-pr-30 {
+    padding-right: 30px;
+}
+
+.u-pt-100 {
+    padding-top: 100px;
 }
 
 // Width
 .u-w-100p {
     width: 100%;
 }
+
 .u-w-60p {
     width: 60%;
+}
+
+.u-w-45p {
+    width: 45%;
 }
 
 // Height
@@ -83,4 +101,8 @@
 // Text
 .u-ta-center {
     text-align: center;
+}
+
+.u-ta-right {
+    text-align: right;
 }

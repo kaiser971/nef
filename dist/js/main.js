@@ -16,3 +16,11 @@ $('.group-form--input input').on('blur', function () {
         $(this).addClass('filled');
     }
 });
+
+// Textarea filled
+$('.group-form textarea').on('blur', function () {
+    $(this).removeClass('filled');
+    if($(this).val().length > 0) {
+        $(this).addClass('filled');
+    }
+});

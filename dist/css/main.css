@@ -374,6 +374,18 @@ p {
   right: 0;
   margin: 0 auto; }
 
+.btn {
+  border: none;
+  text-transform: uppercase;
+  padding: 15px 30px;
+  color: white;
+  background-color: #00b5d6; }
+  .btn:hover {
+    background-color: #00446b; }
+
+button {
+  cursor: pointer; }
+
 .block-center {
   display: flex;
   flex-direction: column;
@@ -652,6 +664,7 @@ p {
 
 .form {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   width: 70%;
   margin: 0 auto; }
@@ -660,13 +673,16 @@ p {
   position: relative;
   margin-top: 15px; }
 
+.group-form label {
+  display: block; }
+
 .group-form--input input {
   margin-top: 15px; }
 
 .group-form--input input {
   background: transparent;
   border: none;
-  padding: 10px;
+  padding: 10px 0 10px 0;
   border-bottom: 1px solid #dadada;
   width: 100%;
   outline: none; }
@@ -685,15 +701,44 @@ p {
 
 .group-form--input input:focus + label, .group-form--input input.filled + label {
   top: 0;
-  font-size: 14px; }
+  font-size: 14px;
+  color: #a2a2a2; }
 
 .group-form--input input:focus + label {
   transition: all 0.3s; }
 
 .group-form textarea {
   width: 100%;
+  height: 80px;
+  padding: 0;
+  resize: vertical;
   background-color: transparent;
-  border: 1px solid #dadada; }
+  border: none;
+  border-bottom: 1px solid #dadada;
+  margin-top: 10px;
+  outline: none; }
+
+.group-form textarea:focus {
+  border-bottom: 4px solid #00b5d6;
+  padding-bottom: 7px;
+  transition: all 0.3s; }
+
+.group-form--input input.filled, .group-form textarea.filled {
+  border-bottom: 1px solid #00b5d6; }
+
+.group-form input, .group-form textarea {
+  font-weight: 700; }
+
+.footer {
+  background: #797979;
+  height: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  font-size: 12px; }
 
 .u-c-white {
   color: white; }
@@ -734,6 +779,9 @@ p {
 .u-mt-15 {
   margin-top: 15px; }
 
+.u-mt-30 {
+  margin-top: 30px; }
+
 .u-p-15 {
   padding: 15px; }
 
@@ -749,8 +797,14 @@ p {
 .u-pr-15 {
   padding-right: 15px; }
 
-.u-pt-60 {
-  padding-top: 60px; }
+.u-pl-30 {
+  padding-left: 30px; }
+
+.u-pr-30 {
+  padding-right: 30px; }
+
+.u-pt-100 {
+  padding-top: 100px; }
 
 .u-w-100p {
   width: 100%; }
@@ -758,8 +812,14 @@ p {
 .u-w-60p {
   width: 60%; }
 
+.u-w-45p {
+  width: 45%; }
+
 .u-h-100p {
   height: 100%; }
 
 .u-ta-center {
   text-align: center; }
+
+.u-ta-right {
+  text-align: right; }

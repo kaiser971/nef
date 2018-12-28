@@ -10,6 +10,7 @@
 {% import "components/title.twig" as title %}
 {% import "components/block.twig" as block %}
 {% import "components/form.twig" as form %}
+{% import "components/button.twig" as button %}
 {% import "partials/nav.twig" as nav %}
 {% import "blocks/block--home.twig" as blockHome %}
 
@@ -113,47 +114,65 @@
 
         {# ----SET VARIABLE---- #}
         {% set slide5 =
+            title.titleh2('class="title title--2 title--line u-pt-100"',"Contactez-nous") ~
             form.form(
-                'class="u-pt-60 form"',
+                'class="form"',
                 block.blockDiv(
-                    'class="u-p-15 u-w-100p"',
+                    'class="u-p-15 u-w-45p"',
                     block.blockDiv(
                         'class="group-form group-form--input"',
                         form.input('text','','','','') ~
-                        form.label('','input 1') ~
-                        paragraph.p('class="error-text u-mt-10"',"lorem ipsum error")
+                        form.label('',"Nom",'required') ~
+                        paragraph.p('class="error-text u-mt-10"',"lorem ipsum error name")
                     ) ~
                     block.blockDiv(
                         'class="group-form group-form--input"',
                         form.input('text','','','','') ~
-                        form.label('','input 2') ~
-                        paragraph.p('class="error-text u-mt-10"',"lorem ipsum error 2")
-                    ) ~
-                    block.blockDiv(
-                        'class="group-form group-form--input"',
-                        form.input('text','','','','') ~
-                        form.label('','input 3') ~
-                        paragraph.p('class="error-text u-mt-10"',"lorem ipsum error 3")
+                        form.label('',"Téléphone",'required') ~
+                        paragraph.p('class="error-text u-mt-10"',"lorem ipsum error tel")
                     )
                 ) ~
                 block.blockDiv(
-                    'class="u-p-15 u-w-100p"',
+                    'class="u-p-15 u-w-45p"',
+                    block.blockDiv(
+                        'class="group-form group-form--input"',
+                        form.input('text','','','','') ~
+                        form.label('',"Secteur d'activité",'') ~
+                        paragraph.p('class="error-text u-mt-10"',"lorem ipsum error sector")
+                    ) ~
+                    block.blockDiv(
+                        'class="group-form group-form--input"',
+                        form.input('text','','','','') ~
+                        form.label('',"Email",'required') ~
+                        paragraph.p('class="error-text u-mt-10"',"lorem ipsum error mail")
+                    )
+                ) ~
+                block.blockDiv(
+                    'class="u-pl-30 u-pr-30 u-w-100p"',
                     block.blockDiv(
                         'class="group-form"',
-                        form.label('','textarea 1') ~
+                        form.label('','Votre demande :','required') ~
                         form.textarea('','') ~
-                        paragraph.p('class="error-text u-mt-10"',"lorem ipsum error 3")
+                        paragraph.p('class="error-text u-mt-10"',"lorem ipsum error textarea")
+                    ) ~
+                    block.blockDiv(
+                        'class="u-ta-right u-mt-30"',
+                        button.button('btn btn-submit','submit','','Envoyer')
                     )
                 )
 
             )
         %}
 
+        {% set footer = block.blockDiv('class="footer u-ta-center"',"Copyright‎ © 2018") %}
+
         {# ----CALL VARIABLE---- #}
-        {{ section.section(
+        {{ section.sectionFooter(
         'class="section section--contact" data-anchor="section-contact"',
-        slide5
-        ) }}
+        slide5,
+        footer
+        )
+        }}
 
     </div>
 

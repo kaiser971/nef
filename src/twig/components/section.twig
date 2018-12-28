@@ -22,3 +22,14 @@
     </section>
 
 {% endmacro %}
+
+{% macro sectionFooter(attribut, content, footer) %}
+
+    <section {{ attribut }}>
+        <div class="container">
+            {{ content|raw }}
+        </div>
+        {{ footer|raw }}
+    </section>
+
+{% endmacro %}
