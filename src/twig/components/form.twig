@@ -1,18 +1,14 @@
 {# FORM #}
 {% macro form(attribut, content) %}
 
-    <form {{ attribut }}>
-        {{ content|raw }}
-    </form>
+    <form {{ attribut }}>{{ content|raw }}</form>
 
 {% endmacro %}
 
 {# LABEL #}
-{% macro label(attribut, content) %}
+{% macro label(attribut, content, required) %}
 
-    <label {{ attribut }}>
-        {{ content|raw }}
-    </label>
+    <label {{ attribut }}>{{ content|raw }} {% if required == 'required' %}*{% endif %}</label>
 
 {% endmacro %}
 
@@ -39,9 +35,7 @@
 
 {# SELECT #}
 {% macro select(class,attributes,select) %}
-    <select class="default {{ class }}" {{ attributes }}>
-        {{ select|raw }}
-    </select>
+    <select class="default {{ class }}" {{ attributes }}>{{ select|raw }}</select>
 {% endmacro %}
 
 {% macro option(value,attributes,option) %}
@@ -50,7 +44,5 @@
 
 {# TEXTAREA #}
 {% macro textarea(attributes,content) %}
-    <textarea {{ attributes }}>
-        {{ content|raw }}
-    </textarea>
+    <textarea {{ attributes }}>{{ content|raw }}</textarea>
 {% endmacro %}
