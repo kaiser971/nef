@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="description" content="A demo of how to use gulp-twig"/>
+    <meta name="author" content="NEF"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>NEF</title>
+    <link href="https://fonts.googleapis.com/css?family=Dosis:200,400,600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:200,400,600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+
+</head>
+<body>
+<div class="navigationContainer">
+    <a href=#home alt=home>
+        <img class="logo--nav" src="img/logo.png" alt=logo/>
+    </a>
+    <ul class="navigation">
+        <li>
+            <a class="link link-prez" href=#section-prez alt=nextsection>Présentation</a>
+        </li>
+        <li>
+            <a class="link link-metier" href=#section-metiers alt=nextsection>Nos métiers</a>
+        </li>
+        <li>
+            <a class="link link-galerie" href=#section-galerie alt=nextsection>Galerie</a>
+        </li>
+        <li>
+            <a class="link link-contact" href=#section-contact alt=nextsection>Contactez-nous</a>
+        </li>
+    </ul>
+</div>
+<div class="bg-fixe">
+    <video autoplay muted loop class="bgVideo">
+        <source src="video/background_video.mp4" type="video/mp4">
+    </video>
+</div>
+<div id="fullpage">
+    <section class="section section--home" data-anchor="home">
+        <div class="container">
+            <img class="logo--home" src="img/logo.png" alt=logo/>
+            <a class="link link--scroll" href=#section-prez alt=nextsection>
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+            </a>
+        </div>
+    </section>
+    <section class="section section--prez" data-anchor="section-prez">
+        <div class="container-split">
+            <div class="section-left">
+            </div>
+            <div class="section-right">
+                <div class="block-center u-w-60p u-m-0a">
+                    <h2 class="title title--2 title--line">Présentation de l'entreprise</h2>
+                    <p class="medium u-ta-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                        convallis, elit id vestibulum fermentum, arcu quam ultricies est, at condimentum ipsum magna sit
+                        amet ante. Nam eleifend sollicitudin ex quis consectetur. Quisque mollis, purus sit amet mollis
+                        tempor, quam ligula imperdiet purus, eu feugiat lectus mi vitae odio. Duis arcu sem, semper id
+                        aliquet sed, efficitur nec elit. Quisque nec neque erat. Cras id augue elit. Aliquam convallis,
+                        dui dignissim consectetur tincidunt, lectus nisl dictum sem, ultricies lacinia ex mi at elit.
+                        Proin vitae nisi congue metus rhoncus porttitor et sit amet felis. Vestibulum sit amet lacinia
+                        libero, id viverra felis.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section section--metiers" data-anchor="section-metiers">
+        <div class="container-split">
+                <div style="clear: both"> </div>
+                <div class="section-left">
+                    <div class="block-center u-w-60p u-m-0a">
+                        <h2 class="title title--2 title--line">Nos Métiers</h2>
+                        <ul class="medium u-ta-center">
+                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </li>
+                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </li>
+                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="section-right">
+                </div>
+            <a class="u-ta-center link link--scroll" href=#home alt=nextsection>Scroll</a>
+        </div>
+    </section>
+    <section class="section section--galerie u-pt-60" data-anchor="section-galerie">
+        <div class="container">
+            <div class="section-center-bis">
+                <h2 class="title title--2 title--line">Galerie</h2>
+            </div>
+            <div class="gallery">
+                <div class="gallery-link">
+                    <img class="gallery-image" src="img/galerie/nef_1.jpg" alt=unsplash/>
+                </div>
+                <div class="gallery-link">
+                    <img class="gallery-image" src="img/galerie/nef_2.jpg" alt=unsplash/>
+                </div>
+                <div class="gallery-link">
+                    <img class="gallery-image" src="img/galerie/nef_3.jpg" alt=unsplash/>
+                </div>
+                <div class="gallery-link">
+                    <img class="gallery-image" src="img/galerie/nef_4.jpg" alt=unsplash/>
+                </div>
+                <div class="gallery-link">
+                    <img class="gallery-image" src="img/galerie/nef_6.jpg" alt=unsplash/>
+                </div>
+                <div class="gallery-link">
+                    <img class="gallery-image" src="img/galerie/nef_7.jpg" alt=unsplash/>
+                </div>
+                <div class="gallery-link">
+                    <img class="gallery-image" src="img/galerie/nef_8.jpg" alt=unsplash/>
+                </div>
+                <div class="gallery-link">
+                    <img class="gallery-image" src="img/galerie/nef_9.jpg" alt=unsplash/>
+                </div>
+                <div class="gallery-link">
+                    <img class="gallery-image" src="img/galerie/nef_10.jpg" alt=unsplash/>
+                </div>
+                <div class="gallery-link">
+                    <img class="gallery-image" src="img/galerie/nef_11.jpg" alt=unsplash/>
+                </div>
+                <div class="gallery-link">
+                    <img class="gallery-image" src="img/galerie/nef_12.jpg" alt=unsplash/>
+                </div>
+                <div class="gallery-link">
+                    <img class="gallery-image" src="img/galerie/nef_13.jpg" alt=unsplash/>
+                </div>
+                <div class="gallery-link">
+                    <img class="gallery-image" src="img/galerie/nef_14.jpg" alt=unsplash/>
+                </div>
+                <div class="gallery-link">
+                    <img class="gallery-image" src="img/galerie/nef_15.jpg" alt=unsplash/>
+                </div>
+                <div class="gallery-link">
+                    <img class="gallery-image" src="img/galerie/nef_16.jpg" alt=unsplash/>
+                </div>
+                <div class="gallery-link">
+                    <img class="gallery-image" src="img/galerie/nef_17.jpg" alt=unsplash/>
+                </div>
+                <div class="gallery-link">
+                    <img class="gallery-image" src="img/galerie/nef_18.jpg" alt=unsplash/>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section section--contact " data-anchor="section-contact">
+        <div class="container">
+            <div class="padding-menu">
+                <div class="block-center u-w-60p u-m-0a" >
+                    <h2 class="title title--2 title--line">Contact</h2>
+                    <form class="u-pt-60" style="color:black">
+                        <div class="form_text">
+                            <label>
+                                Nom:
+                            </label>
+                        </div>
+                        <div class="form_text">
+                            <input type="text" class="default " placeholder="lorem ipsum" data-validation=''/>
+                        </div>
+                        <div class="form_text">
+                            <label>
+                                Prenom:
+                            </label>
+                        </div>
+                        <div class="form_text">
+                            <input type="text" class="default " placeholder="lorem ipsum" data-validation=''/>
+                        </div>
+                        <div class="form_text">
+                            <label>
+                                Description:
+                            </label>
+                        </div>
+                        <div class="form_text">
+                            <textarea rows="4" cols="50">Some text...</textarea>
+                        </div>
+                        <div style="width: 100%;text-align: center">
+                            <button value="">Envoyer</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://rawgit.com/alvarotrigo/fullPage.js/dev/src/fullpage.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
